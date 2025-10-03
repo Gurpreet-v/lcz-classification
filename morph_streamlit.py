@@ -765,9 +765,9 @@ with tab1:
 
         if res["image"]:
             if res["image"].startswith("http"):
-                st.image(res["image"], caption=f"Example for LCZ-{lcz}", use_column_width=True)
+                st.image(res["image"], caption=f"Example for LCZ-{lcz}", use_container_width=True)
             else:
-                st.image(res["image"], caption=f"Example for LCZ-{lcz}", use_column_width=True)
+                st.image(res["image"], caption=f"Example for LCZ-{lcz}", use_container_width=True)
 
         st.subheader("Alternative matches")
         if alts:
@@ -860,7 +860,7 @@ with tab2:
                 st.markdown(f"### LCZ-{it['code']}")
                 st.markdown(f"**Type:** {it['type']}")
                 if show_images and it["image"]:
-                    st.image(it["image"], use_column_width=True, caption=f"Example — LCZ-{it['code']}")
+                    st.image(it["image"], use_container_width=True, caption=f"Example — LCZ-{it['code']}")
                 st.markdown(it["definition"] or "_No definition provided._")
 
                 if it["implications"]:
@@ -889,7 +889,7 @@ with tab2:
                 st.markdown(f"### LCZ-{it['code']}")
                 st.markdown(f"**Type:** {it['type']}")
                 if show_images and it["image"]:
-                    st.image(it["image"], use_column_width=True, caption=f"Example — LCZ-{it['code']}")
+                    st.image(it["image"], use_container_width=True, caption=f"Example — LCZ-{it['code']}")
                 st.markdown(it["definition"] or "_No definition provided._")
                 #with st.expander("More"):
                 #    st.write(f"Group: `{it['group']}`")
@@ -1216,11 +1216,11 @@ with tab4:
     col1, col2 = st.columns(2)
     with col1:
         st.subheader("Final GIS based LCZ classification")
-        st.image(os.path.join(CUR_DIR, "images", "gislcz.png"), width=650, use_column_width=False)
+        st.image(os.path.join(CUR_DIR, "images", "gislcz.png"), width=650, use_container_width=False)
 
     with col2:
         st.subheader("Final WUDAPT based LCZ classification")
-        st.image(os.path.join(CUR_DIR, "images", "WUDAPTlcz.png"), width=615, use_column_width=False)
+        st.image(os.path.join(CUR_DIR, "images", "WUDAPTlcz.png"), width=615, use_container_width=False)
 
     st.divider()
 
@@ -1296,7 +1296,7 @@ with tab5:
                     with grid[i % ncols]:
                         img = load_image(path)
                         if img:
-                            st.image(img, caption=label, use_column_width=True)
+                            st.image(img, caption=label, use_container_width=True)
 
  
 
@@ -1323,7 +1323,7 @@ with tab6:
         st.subheader("Pune Results")
         pune_img = os.path.join(COMP_DIR, "punelcz.png")  
         if os.path.exists(pune_img):
-            st.image(pune_img, caption="Pune WUDAPT LCZ Classification. Credit: Prasad Pathak", use_column_width=True)
+            st.image(pune_img, caption="Pune WUDAPT LCZ Classification. Credit: Prasad Pathak", use_container_width=True)
         else:
             st.info("Pune comparison plot not found.")
 
@@ -1339,7 +1339,7 @@ with tab6:
         st.subheader("Changsha Results")
         changsha_img = os.path.join(COMP_DIR, "changshalcz.png")   
         if os.path.exists(changsha_img):
-            st.image(changsha_img, caption="Changsha WUDAPT LCZ Classification", use_column_width=True)
+            st.image(changsha_img, caption="Changsha WUDAPT LCZ Classification", use_container_width=True)
         else:
             st.info("Changsha comparison plot not found.")
 
