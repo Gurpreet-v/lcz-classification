@@ -1352,7 +1352,3 @@ with tab6:
 
 
 
-
-#streamlit run /Users/gurpreetv/Desktop/sem7/urban2/streamlit_app.py
-#streamlit run urban2/streamlit_app.py
-
