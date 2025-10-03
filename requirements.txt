@@ -1,0 +1,9 @@
+streamlit
+json
+pandas
+pillow
+graphviz
+numpy
+matplotlib
+typing
+
